@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Script em JS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: minmax(auto, 350px) minmax(auto, 600px) minmax(1fr, 350px);
+            grid-template-areas: 
+            "header header header"
+            "sidenav content ads"  
+            "footer footer footer"
+            ;
+        }
+
+        img {
+            max-width: 300px;
+        }
+
+        p {
+            text-indent: 30px;
+            line-height: 2em;
+        }
+
+        .header {
+            background-color: darkcyan;
+            color: white;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-area: header;
+        }
+
+        .header .logo, h1, .nav {
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.404);
+        }
+
+        .header .logo {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 2.5em;
+        }
+
+        .header h1 {
+            text-decoration: underline;
+        }
+
+        .header .nav > a{
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .header .nav > a:hover {
+            background-color: white;
+            color: rgb(1, 54, 54);
+        }
+
+        main {
+            margin: 0px 30px 30px 30px ;
+        }
+
+        main .content {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            padding-top: 20px;
+            max-width: 600px;
+            grid-area: content;
+            display: grid;
+            grid-template-columns: minmax(300px, auto) auto;
+            
+            ;
+            gap: 0 20px;
+        }
+
+        main .content p {
+            text-align: justify;
+        }
+
+        main .content p#special {
+            grid-column: span 2;
+        }
+
+        main .content > div {
+            align-self: center;
+        }
+
+        div.sidenav {
+            grid-area: sidenav;
+            background-color: gray;
+        }
+
+        div.sidenav > .sn-content {
+            width: 80%;
+            height: 100px;
+            margin: 20px auto;
+            background-color: tan;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+
+        div.aside {
+            grid-area: ads;
+            background-color: aquamarine;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+
+        div.aside > .ads {
+            width: 80%;
+            height: 750px;
+            margin: 20px auto;
+            background-color: rgb(14, 160, 99);
+        }
+
+        div.aside > .ads > img {
+            max-height: 700px;
+        }
+
+        .footer {
+            background-color: darkcyan;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            grid-area: footer;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <span class="logo">Logo</span>
+        <h1 class="title">Título do Site</h1>
+        <nav class="nav">
+            <a href="">Home</a>
+            <a href="">Produtos</a>
+            <a href="">Sobre Nós</a>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident incidunt, repellendus facilis reiciendis sapiente reprehenderit ad optio temporibus error illo, assumenda delectus doloribus, ea suscipit! Modi totam excepturi dicta tempora.</p>
+            <div class="image"><img src="https://letsenhance.io/static/a31ab775f44858f1d1b80ee51738f4f3/11499/EnhanceAfter.jpg" alt="img1"></div>
+
+            <p id="special">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat magnam architecto officiis velit quam, sint ab reprehenderit eius enim labore porro sunt vitae non. Tenetur rem tempore voluptates quod sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ad quia dolorem aperiam? At, impedit qui provident deserunt dolorum voluptate dolore perspiciatis totam doloremque voluptates saepe repellendus debitis aspernatur ducimus!Loremlorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni saepe, facere corrupti ipsa ducimus blanditiis, illo eligendi, omnis laboriosam consectetur itaque dolor esse nulla. Labore illo dolor sint eveniet? Corporis!</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque esse, sed earum nesciunt fugit, deserunt, harum enim voluptatem vitae culpa blanditiis animi molestiae in dolores laboriosam aliquid exercitationem corrupti est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatibus, dicta, provident minima distinctio omnis enim rem quasi debitis ab vel! Quas quae reiciendis quaerat excepturi, natus totam soluta facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nesciunt at qui, obcaecati aut itaque quod et quidem dignissimos delectus sunt animi adipisci laudantium, possimus eius ipsa doloribus hic inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio necessitatibus est facere totam voluptates enim aspernatur perferendis culpa? Similique odit dolorem dolorum sint quidem molestias, consequuntur debitis voluptatibus commodi nulla?</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque esse, sed earum nesciunt fugit, deserunt, harum enim voluptatem vitae culpa blanditiis animi molestiae in dolores laboriosam aliquid exercitationem corrupti est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatibus, dicta, provident minima distinctio omnis enim rem quasi debitis ab vel! Quas quae reiciendis quaerat excepturi, natus totam soluta facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reiciendis, quam consectetur voluptas facere esse facilis, illo blanditiis necessitatibus architecto totam quia minima maiores quidem repellendus voluptate fugit quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem pariatur, provident excepturi voluptate cumque iste tenetur aut consectetur aspernatur nihil libero fugiat placeat autem veniam voluptatum quo natus sapiente.</p>
+        </div>
+    </main>
+    <div class="sidenav">
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+        <div class="sn-content"></div>
+    </div>
+
+    <div class="aside">
+        <div class="ads"><img src="https://www.gourmetads.com/wp-content/uploads/2019/05/fast-food-ads-burger-king-300x600.jpg" alt="ad1"></div>
+        <div class="ads"></div>
+    </div>
+    <footer class="footer">
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+         var n1 = Number(window.prompt("Digite um número: "))
+         var n2 = Number(window.prompt("Digite outro número: "))
+         var soma = n1 + n2
+         var produto = n1 * n2
+         window.alert (`A soma entre os números ${n1} e ${n2} é igual a ${soma}, e o produto entre eles é igual a ${produto}`)
+    </script>
+</body>
+</html> 
