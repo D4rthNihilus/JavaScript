@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com JavaScript</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            padding: 20px  30px;
+            background-color: rgb(255, 166, 0);
+            background-image: linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0));
+            display: flex;
+            align-items: center;
+        }
+
+        header #logo > img {
+            max-width: 50px;
+        }
+
+        header h1 {
+            color: white;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.452);
+            margin-left: 20px;
+        }
+
+        nav {
+            padding: 10px;
+            margin: auto 20px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted gray;
+        }
+
+        nav a {
+            padding: 5px;
+            color: rgb(0, 66, 0);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 66, 0);
+        }
+
+        main > section#sidenav > a {
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+
+        main > section#sidenav > a > img#special {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+        main > section#sidenav > a > img {
+            max-width: 100px;
+            padding: 5px;
+            border: 2px solid rgb(221, 220, 220);
+            border-radius: 10px;
+        }
+
+        main > section#sidenav > a > img:hover {
+            max-width: 100px;
+            border: 2px solid orange
+        }
+
+        main {
+            margin: 20px 30px;
+        }
+
+        main h1 {
+            color: rgb(255, 123, 0);
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        main img {
+            margin: 10px 0px;
+            max-width: 100%;
+        }
+
+        main p {
+            text-align: justify;
+            text-indent: 30px;
+            margin-bottom: 10px;
+        }
+
+        main > section#content > article#cssgl {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        main > section#content > article#cssgl > div#col2 {
+            display: grid;
+            align-items: space-between;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: rgb(255, 166, 0);
+            background-image: linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0));
+            text-align: center;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3137/3137032.png" alt="ícone de laranja">
+        </div>
+        <h1>Jailson Mendes</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Filmes</a>
+        <a href="#">Ursos</a>
+        <a href="#">Receitas</a>
+        <a href="#">Sobre Nós</a>
+    </nav>
+
+    <main>
+
+        <section id="sidenav">
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/185/185736.png" alt="Urso pardo">
+            </a>
+
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/185/185734.png" alt="Urso panda">
+            </a>
+
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/4082/4082019.png" alt="Urso polar" id="special">
+            </a>
+        </section>
+
+        <section id="content">
+            <h1>Jailson Mendes</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio iure voluptas repudiandae, possimus quam porro cupiditate rem consectetur officiis fugit, inventore quasi commodi corporis assumenda, blanditiis harum obcaecati? Quo, unde.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur dolorum deserunt enim ea eaque a magni doloribus accusamus, exercitationem nisi aliquam fuga modi molestiae inventore obcaecati. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, minima ipsa? Veniam pariatur suscipit placeat reprehenderit eum velit quia adipisci eos, mollitia consequuntur officiis. Esse debitis laboriosam perspiciatis illum ab?</p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/pt/8/8d/Jailson_Mendes.jpg" alt="Jailson Mendes">
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio iure voluptas repudiandae, possimus quam porro cupiditate rem consectetur officiis fugit, inventore quasi commodi corporis assumenda, blanditiis harum obcaecati? Quo, unde.</p>
+
+            <article id="cssgl">
+                <div id="col1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur dolorum deserunt enim ea eaque a magni doloribus accusamus, exercitationem nisi aliquam fuga modi molestiae inventore obcaecati. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, minima ipsa? Veniam pariatur suscipit placeat reprehenderit eum velit quia adipisci eos, mollitia consequuntur officiis.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam voluptatem nisi quis molestiae neque autem nobis delectus aliquam alias voluptas, totam voluptate repudiandae tempora aliquid architecto beatae quam praesentium qui. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ex minima voluptates? Amet at sit aliquid incidunt maiores obcaecati fugit eveniet cumque, qui delectus dolorum animi aperiam iste, sapiente quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus repellat aspernatur deleniti nihil dolorum, sint repellendus voluptatibus amet deserunt quod ipsam dicta consequuntur omnis ab eveniet eius dignissimos. Quasi, veritatis! lorem</p>
+                </div>
+                <div id="col2">
+                    <img src="https://i1.sndcdn.com/artworks-000203924870-zghxir-t500x500.jpg" alt="Jailson 2">
+                    <img src="https://pm1.aminoapps.com/6595/365452bfd9d53d7892c1856cb2592f191563855e_00.jpg" alt="Kauan Desu">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGAaFo0BVpG2w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702781289927?e=2147483647&v=beta&t=6o7N2IyoZHIh86i1iUcQYQbRtXZiZ0P-AiZCh1NZnYo" alt="Paulo Guina">
+                </div>
+            </article>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quaerat eum, voluptas minima soluta molestiae labore, eos recusandae itaque reprehenderit corporis provident facilis impedit, eius velit delectus sint fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium voluptatem assumenda quam nostrum recusandae doloribus, nesciunt laborum tempore amet dignissimos culpa natus cumque tenetur tempora sapiente magnam, eius minima.</p>
+        </section>
+
+        <section id="adverts">
+
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; Todos os direitos reservados. 2025</p>
+    </footer>
+</body>
+
+<script>
+    
+</script>
+</html>

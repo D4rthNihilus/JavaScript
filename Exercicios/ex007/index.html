@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Eventos DOM</title>
+
+    <style>
+        input {
+            padding: 5px;
+            text-align: center;
+            width: 50px;
+            border: 1px solid black;
+        }
+
+        input.button {
+            width: 70px;
+            margin-top: 20px;;
+            display: block;
+            background-color: blue;
+            color: white;
+        }
+
+        div#resultado {
+            color: gray;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+            width: 70px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="n1" id="n1"> <span id="sinal">+</span>
+    <input type="number" name="n2" id="n2"> =
+
+    <div id="resultado">
+        resultado
+    </div>
+
+    <input type="button" value="Somar" onclick="somar()" id="soma" class="button">
+    <input type="button" value="Raíz" id="root" class="button" onclick="raiz()">
+
+    <script>
+        function somar() {
+            var n1 = Number(window.document.getElementById('n1').value)
+        var n2 = Number(window.document.getElementById('n2').value)
+            var res = document.getElementById('resultado')
+            var s = n1 + n2
+            res.innerHTML = s
+        }
+
+        function raiz() {
+            var sign = document.getElementById('sinal')
+            sign.innerHTML = ('√')
+
+            var n1 = Number(window.document.getElementById('n1').value)
+            var n2 = Number(window.document.getElementById('n2').value)
+            var res = document.getElementById('resultado')
+            var r = (n2 ** (1/n1)).toFixed(2)
+            res.innerHTML = r
+        }
+
+    </script>
+
+</body>
+</html>
