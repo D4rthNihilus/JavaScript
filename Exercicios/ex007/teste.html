@@ -25,8 +25,14 @@
 
         header h1 {
             color: white;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.452);
+            text-shadow: 3px 3px 5px #00000073;
             margin-left: 20px;
+        }
+
+        p#clue {
+            text-align: center;
+            margin: auto;
+            padding: 10px;
         }
 
         nav {
@@ -65,6 +71,7 @@
             padding: 5px;
             border: 2px solid rgb(221, 220, 220);
             border-radius: 10px;
+            background-color: white;
         }
 
         main > section#sidenav > a > img:hover {
@@ -115,7 +122,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div id="logo">
             <img src="https://cdn-icons-png.flaticon.com/512/3137/3137032.png" alt="ícone de laranja">
         </div>
@@ -123,31 +130,31 @@
     </header>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Filmes</a>
-        <a href="#">Ursos</a>
-        <a href="#">Receitas</a>
-        <a href="#">Sobre Nós</a>
+        <a href="#" class="nav">Home</a>
+        <a href="#" class="nav">Filmes</a>
+        <a href="#" class="nav">Ursos</a>
+        <a href="#" class="nav">Receitas</a>
+        <a href="#" class="nav">Sobre Nós</a>
     </nav>
 
     <main>
-
+        <p id="clue">Clique em um dos ursos</p>
         <section id="sidenav">
-            <a href="#">
+            <a href="#" onclick="clickPardo()">
                 <img src="https://cdn-icons-png.flaticon.com/512/185/185736.png" alt="Urso pardo">
             </a>
 
-            <a href="#">
+            <a href="#" onclick="clickPanda()">
                 <img src="https://cdn-icons-png.flaticon.com/512/185/185734.png" alt="Urso panda">
             </a>
 
-            <a href="#">
+            <a href="#" onclick="clickPolar()">
                 <img src="https://cdn-icons-png.flaticon.com/512/4082/4082019.png" alt="Urso polar" id="special">
             </a>
         </section>
 
         <section id="content">
-            <h1>Jailson Mendes</h1>
+            <h1 id="mainTitle">Jailson Mendes</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio iure voluptas repudiandae, possimus quam porro cupiditate rem consectetur officiis fugit, inventore quasi commodi corporis assumenda, blanditiis harum obcaecati? Quo, unde.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur dolorum deserunt enim ea eaque a magni doloribus accusamus, exercitationem nisi aliquam fuga modi molestiae inventore obcaecati. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, minima ipsa? Veniam pariatur suscipit placeat reprehenderit eum velit quia adipisci eos, mollitia consequuntur officiis. Esse debitis laboriosam perspiciatis illum ab?</p>
 
@@ -166,7 +173,6 @@
                     <img src="https://media.licdn.com/dms/image/v2/D4E03AQGAaFo0BVpG2w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702781289927?e=2147483647&v=beta&t=6o7N2IyoZHIh86i1iUcQYQbRtXZiZ0P-AiZCh1NZnYo" alt="Paulo Guina">
                 </div>
             </article>
-
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quaerat eum, voluptas minima soluta molestiae labore, eos recusandae itaque reprehenderit corporis provident facilis impedit, eius velit delectus sint fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium voluptatem assumenda quam nostrum recusandae doloribus, nesciunt laborum tempore amet dignissimos culpa natus cumque tenetur tempora sapiente magnam, eius minima.</p>
         </section>
 
@@ -175,12 +181,36 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <p> &copy; Todos os direitos reservados. 2025</p>
     </footer>
 </body>
 
 <script>
-    
+    function clickPardo() {
+        var pardo = window.alert("Aaaaaaaai, AAAAAAAi! Que delícia cara!")
+        document.body.style.backgroundImage = "url('https://i.pinimg.com/736x/9f/45/54/9f4554385156262b43711e60c4121ee5.jpg')"
+        document.body.style.backgroundSize = "contain"
+        document.body.style.color = "white"
+        document.getElementById('mainTitle').style.color = 'rgb(0, 66, 0)'
+        document.getElementById('header').style.backgroundImage ='linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0))'
+    }
+
+    function clickPanda() {
+        var panda = window.prompt("Como assim? Não entendi. Você quer relaxar em que sentido?")
+        document.body.style.backgroundColor ="black"
+        document.body.style.color = "white"
+        document.getElementById('header').style.backgroundImage ='linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0))'
+
+    }
+
+    function clickPolar() {
+        var pardo = window.confirm("Era essa peça que você queria?")
+        document.body.style.backgroundColor ="white"
+        document.body.style.backgroundImage ='none'
+        document.body.style.color = "black"
+        document.getElementById('header').style.backgroundImage ='linear-gradient(45deg, rgb(0, 183, 255), rgb(102, 203, 228), rgb(156, 230, 201))'
+        document.getElementById('footer').style.backgroundImage ='linear-gradient(45deg, rgb(0, 183, 255), rgb(102, 203, 228), rgb(156, 230, 201))'
+    }
 </script>
 </html>
