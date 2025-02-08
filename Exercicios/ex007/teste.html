@@ -129,7 +129,7 @@
         <h1>Jailson Mendes</h1>
     </header>
 
-    <nav>
+    <nav id="nav">
         <a href="#" class="nav">Home</a>
         <a href="#" class="nav">Filmes</a>
         <a href="#" class="nav">Ursos</a>
@@ -189,28 +189,44 @@
 <script>
     function clickPardo() {
         var pardo = window.alert("Aaaaaaaai, AAAAAAAi! Que delícia cara!")
-        document.body.style.backgroundImage = "url('https://i.pinimg.com/736x/9f/45/54/9f4554385156262b43711e60c4121ee5.jpg')"
+        document.body.style.backgroundImage = "url('images/urso-background.png')"
         document.body.style.backgroundSize = "contain"
-        document.body.style.color = "white"
-        document.getElementById('mainTitle').style.color = 'rgb(0, 66, 0)'
         document.getElementById('header').style.backgroundImage ='linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0))'
+        document.getElementById('footer').style.backgroundImage ='linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0))'
+        document.body.style.color = 'black'
+        document.querySelectorAll('nav#nav  a')[0].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[1].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[2].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[3].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[4].style.color = 'orange'
     }
 
     function clickPanda() {
         var panda = window.prompt("Como assim? Não entendi. Você quer relaxar em que sentido?")
         document.body.style.backgroundColor ="black"
+        document.body.style.backgroundImage ='none'
+        document.getElementById('mainTitle').style.color = '#FF8000'
         document.body.style.color = "white"
         document.getElementById('header').style.backgroundImage ='linear-gradient(45deg, rgb(255, 123, 0), orange, rgb(255, 187, 0))'
-
+        document.querySelectorAll('nav#nav  a')[0].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[1].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[2].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[3].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[4].style.color = 'orange'
     }
 
     function clickPolar() {
         var pardo = window.confirm("Era essa peça que você queria?")
-        document.body.style.backgroundColor ="white"
+        document.body.style.backgroundColor ="#DDE9F1"
         document.body.style.backgroundImage ='none'
         document.body.style.color = "black"
         document.getElementById('header').style.backgroundImage ='linear-gradient(45deg, rgb(0, 183, 255), rgb(102, 203, 228), rgb(156, 230, 201))'
         document.getElementById('footer').style.backgroundImage ='linear-gradient(45deg, rgb(0, 183, 255), rgb(102, 203, 228), rgb(156, 230, 201))'
+        document.querySelectorAll('nav#nav  a')[0].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[1].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[2].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[3].style.color = 'orange'
+        document.querySelectorAll('nav#nav  a')[4].style.color = 'orange'
     }
 </script>
 </html>
