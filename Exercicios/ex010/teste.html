@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JavaScript</title>
+
+    <style>
+
+        body {
+            background-color: rgb(196, 193, 193);
+        }
+        h1 {
+            text-align: center;
+        }
+
+        div#quest {
+            background-color: white;
+            padding: 30px;
+            margin: auto;
+            max-width: 600px;
+            border-radius: 15px;
+        }
+
+        p, input {
+            display: inline;
+            margin: 10px;
+        }
+
+        input#submit {
+            background-color: rgb(222, 245, 245);
+            border: none;
+            margin-top: 40px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.459);
+            display: grid;
+            justify-self: center;
+        }
+
+        input#submit:active {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questionário</h1>
+
+    <div id="quest">
+        <p>Em qual país você nasceu?</p>
+        <input type="text" id="nac" required>
+        <br>
+        <p>Qual a sua idade?</p>
+        <input type="number" id="idade" min="5" max="200" required>
+        <br>
+        <p>Selecione o seu gênero:</p>
+        <input type="radio" name="gen" id="genm"> Masculino
+        <input type="radio" name="gen" id="genf"> Feminino
+        <input type="radio" name="gen" id="geno"> Outro
+        <br>
+        <input type="button" value="Enviar" id="submit">
+    </div>
+</body>
+
+<script>
+    document.getElementById("submit").addEventListener('click', resp)
+    
+    function resp(){
+        nac = document.getElementById('nac').value
+
+        var val = "estrangeiro"
+        var age = Number(document.getElementById('idade').value)
+        var gen = null
+        var genm = Boolean(document.getElementById("genm").value)
+        var genf = Boolean(document.getElementById("genf").value)
+        var geno = Boolean(document.getElementById("geno").value)
+
+        if (nac == "Brasil") {
+            val = "brasileiro"
+        }
+
+        if (age < 18) {
+            age = "menor de idade"
+        }
+        else {
+            val = "maior de idade"
+        }
+
+        if (genm != false) {
+            gen = "masculino"
+        }
+        else {
+            if(genf != false) {
+            gen = "feminino"
+            } else {
+            gen = "transgênero"
+            }
+        }
+
+
+        window.alert(`Você é um ${val}, ${age} do gênero ${gen}`)
+    }
+</script>
+</html>
