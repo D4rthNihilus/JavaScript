@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Horas</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(45, 134, 156);
+            text-align: center;
+        }
+
+        header > h1 {
+            color: white;
+            padding: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432)
+        }
+
+        main > section {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+            margin: auto;
+            max-width: 600px;
+            height: 70vh;
+        }
+
+        main > section > p {
+            padding: 10px;
+        }
+
+        main > section > div > img {
+            max-width: 370px;
+            border-radius: 50%;
+
+        }
+
+        footer > p {
+            color: white;
+            padding: 30px;
+            font-style: italic;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+        }
+
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <main>
+        <section>
+            <p id="msg">horas</p>
+            <div>
+                <img src="images/manha.png" alt="foto do dia" id="img">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; D4rthNihilus</p>
+    </footer>
+
+    <script>
+        function carregar() {
+            msg = document.getElementById('msg')
+            img = document.getElementById('img')
+            hora = (new Date().getHours())
+
+            msg.innerHTML = `Agora são ${hora} horas`
+
+            if (hora >= 0 && hora < 12) {
+                img.src = 'images/manha.png'
+                document.body.style.backgroundColor = ''
+            } else if (hora <= 18) {
+                img.src = 'images/tarde.png'
+                document.body.style.backgroundColor = 'orange'
+            } else {
+                img.src = 'images/noite.png'
+                document.body.style.backgroundColor = 'darkblue'
+            }
+        }
+    </script>
+</body>
+</html>
