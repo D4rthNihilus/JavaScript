@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício Idades</title>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <main>
+        <section>
+            <div id="input">
+                <p>Ano de nascimento:
+                    <input type="number" name="txtyear" id="txtyear" min="1875" max="2025">
+                </p>
+
+                <p>Sexo: 
+                    <input type="radio" name="radgen" id="male" checked>
+                    <label for="male">Masculino</label>
+                    <input type="radio" name="radgen" id="female">
+                    <label for="female">Feminino</label>
+                </p>
+
+                <p>
+                    <input type="button" value="Verificar" id="button" onclick="verificar()">
+                </p>
+            </div>
+
+            <div id="output">
+                Preencha os dados acima para ver o resultado!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; D4rthNihilus</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
