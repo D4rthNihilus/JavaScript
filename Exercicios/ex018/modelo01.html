@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Contagem</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: rgb(1, 26, 22);
+            text-align: center;
+        }
+
+        header > h1 {
+            color: white;
+            padding: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432)
+        }
+
+        main > section {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+            margin: auto;
+            max-width: 600px;
+            height: 70vh;
+        }
+
+        main > section > div > form {
+            padding: 20px 30px;
+            text-align: left;
+        }
+
+        main > section > div > form > input, #button, p{
+            text-align: left;
+            margin: 30px 0px 0px 0px
+        }
+
+        main > section > div > form > input {
+            padding: 5px;
+            max-width: 100px;
+        }
+
+        main > section > div > form > #button{
+            width: 100px;
+            padding: 7px;
+            text-align: center;
+            background-color: rgb(31, 131, 161);
+            color: white;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.753);
+            border-radius: 10px;
+            font-weight: bolder;
+        }
+
+        main > section > div > form > #button:hover{
+            background-color: rgb(1, 26, 22);
+        }
+
+
+
+        footer > p {
+            color: white;
+            padding: 10px 30px 30px 30px;
+            font-style: italic;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos Pensar em Domir?</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <form action="">
+                    <label for="inicio">Início: </label>
+                    <input type="number" name="inicio" id="inicio">
+                    <br>
+                    <label for="fim">Fim: </label>
+                    <input type="number" name="fim" id="fim">
+                    <br>
+                    <label for="passo">Passo: </label>
+                    <input type="number" name="passo" id="passo">
+                    <br>
+                    <input type="button" id="button" value="Contar" onclick="contar()">
+                </form>
+            </div>
+            <div id="resultado">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; D4rthNihilus</p>
+    </footer>
+
+    <script>
+        function contar(){
+            var ini = document.getElementById('inicio')
+            var fim = document.getElementById('fim')
+            var pas = document.getElementById('passo')
+            var res = document.getElementById('resultado')
+
+            if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
+                window.alert('[ERRO] Faltam dados!')
+            } else {
+                res.innerHTML = "Contando..."
+                var i = Number(ini.value)
+                var f = Number(fim.value)
+                var p = Number(pas.value)
+
+                if (p <= 0) {
+                    window.alert('Passo inválido! Considerando passo 1')
+                    p = 1
+                }
+                // Contagem crescente
+                if (i < f) {
+                    for (var c = i; c <= f; c += p){
+                        res.innerHTML += `${c} \u{1F411} `
+                    }
+                } else {
+                    // Contagem decrescente
+                    for (var c = i; c >= f; c -= p){
+                        res.innerHTML += `${c} \u{1F411} `
+                    }
+                }
+                res.innerHTML += `\u{1F4A4}`
+            }
+        }
+    </script>
+</body>
+</html>
