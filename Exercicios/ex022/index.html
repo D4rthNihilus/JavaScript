@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Analisador de Números</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(45, 134, 156);
+            text-align: center;
+        }
+
+        header > h1 {
+            color: white;
+            padding: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432)
+        }
+
+        main > section {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+            margin: auto;
+            max-width: 600px;
+            height: 70vh;
+        }
+
+        main > section > div > form {
+            padding: 40px;
+        }
+
+        main > section > div > form > input {
+            max-width: 100px;
+            padding: 5px 10px;
+        }
+
+        select#list {
+            width: 150px;
+            padding-left: 10px;
+        }
+
+        input#add {
+        background-color: rgb(15, 114, 114);
+        color: white;
+        font-weight: bolder;
+        }
+
+        input#finish {
+            margin: 10px;
+            padding: 5px 10px;
+            max-width: 100px;
+            background-color: rgb(214, 130, 4);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+            font-weight: bolder;
+        }
+
+        div#analise {
+            margin: 0 25%;
+            text-align: left;
+        }
+
+        footer > p {
+            color: white;
+            padding: 30px;
+            font-style: italic;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <form action="">
+                    <label for="num">Número (entre 1 e 100)</label>
+                    <input type="number" name="num" id="num" minlength="1" maxlength="100">
+                    <input type="button" value="Adicionar" id="add" onclick="adicionar()">
+                </form>
+            </div>
+            <div id="result">
+                <select name="list" id="list" size="10">
+                    <option value="v1"></option>
+                </select>
+                <br>
+                <input type="button" value="Finalizar" id="finish" onclick="finalizar()">
+            </div>
+            <div id="analise">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; D4rthNihilus</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
