@@ -36,6 +36,8 @@ idade = 22
 nomeCompleto = `${nome} ${sobrenome} tem ${idade} anos`;
 
 console.log(nomeCompleto)
+
+
  
 
 
