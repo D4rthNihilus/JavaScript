@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com Objetos em JS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1 {
+            background-color: rgb(255, 196, 0);
+            padding: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        div#screen {
+            background-color: rgba(227, 255, 65, 0.671);
+            margin: 10px auto;
+            height: 360px;
+            width: 700px;
+            display: grid;
+            justify-items: center;
+            align-items: end;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+        }
+
+        div#screen > div#vidaDaBarata {
+            margin: auto;
+            display: flex;
+            border-radius: 30px;
+            border: 2px solid black;
+        }
+
+        div.vida:first-child {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        div.vida:last-child {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        div#vidaDaBarata > div.vida {
+            background-color: red;
+            height: 20px;
+            width: 30px;
+        }
+
+        div#screen > img {
+            height: 300px;
+        }
+
+        div#buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        div#armas {
+            margin: 10px 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        div#armas > div > img {
+            border: 3px solid black;
+            border-radius: 20px;
+            width: 100px;
+        }
+
+        div#armas > div > img:hover {
+            border: 3px solid rgb(255, 187, 0);
+            opacity: 0.7;
+        }
+
+        div#armas > div > img:active {
+            border: 3px solid rgb(252, 152, 2);
+            opacity: 1.0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>MATE A BARATA!</h1>
+    <div id="screen">
+        <div id="vidaDaBarata">
+            <div class="vida" id="v20"></div>
+            <div class="vida" id="v19"></div>
+            <div class="vida" id="v18"></div>
+            <div class="vida" id="v17"></div>
+            <div class="vida" id="v16"></div>
+            <div class="vida" id="v15"></div>
+            <div class="vida" id="v14"></div>
+            <div class="vida" id="v13"></div>
+            <div class="vida" id="v12"></div>
+            <div class="vida" id="v11"></div>
+            <div class="vida" id="v10"></div>
+            <div class="vida" id="v9"></div>
+            <div class="vida" id="v8"></div>
+            <div class="vida" id="v7"></div>
+            <div class="vida" id="v6"></div>
+            <div class="vida" id="v5"></div>
+            <div class="vida" id="v4"></div>
+            <div class="vida" id="v3"></div>
+            <div class="vida" id="v2"></div>
+            <div class="vida" id="v1"></div>
+        </div>
+        <img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-cartoon-scary-cockroach-on-white-background-picture-image_8674592.png" alt="barata">
+    </div>
+
+    <div id="buttons">
+        <div id="armas">
+            <div id="missil"><img src="https://atlas-content-cdn.pixelsquid.com/stock-images/cartoon-missile-9K4EVm0-600.jpg" alt="missil" onclick="missil()"></div>
+            <div id="granada"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/7902063-granada-isolado-em-fundo-branco-vetor.jpg" alt="granada"  onclick="granada()"></div>
+            <div id="macarico"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv73Sah9FNDpmo4eJ7yKEjS1QdLOidvPIURQ&s" alt="macarico"  onclick="macarico()"></div>
+            <div id="bazuca"><img src="https://cdn-icons-png.flaticon.com/512/6657/6657563.png" alt="bazuca"  onclick="bazuca()"></div>
+            <div id="revolver"><img src="https://thumbs.dreamstime.com/b/rev%C3%B3lver-do-vetor-de-iconcartoon-arma-%C3%ADcone-isolado-no-branco-fundo-da-canh%C3%A3o-176517905.jpg" alt="revolver" onclick="revolver()"></div>
+            <div id="inseticida"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKSGDaUePxAqq1X2mxz0Vg3cPiB7eK4gx9g&s" alt="inseticida"  onclick="inseticida()"></div>
+            <div id="chinelo"><img src="https://acdn-us.mitiendanube.com/stores/001/815/528/products/seja-sua-melhor-versao-p2-79bc4b40c0590b40ad17402688802526-1024-1024.png" alt="chinelo" onclick="chinelo()"></div>
+        </div>
+    </div>
+
+    <script src="script.js">
+
+    let damage = 0;
+    let weapon;
+    let totalDamage = 0;
+
+        function lifeLevel() {
+            totalDamage += damage;
+        }
+
+        function missil() {
+            weapon = "missil";
+            damage = 5;
+        }
+
+        function missil() {
+            weapon = "missil";
+            damage = 5;
+        }
+
+        function granada() {
+            weapon = "granada";
+            damage = 4;
+        }
+
+        function bazuca() {
+            weapon = "bazuca";
+            damage = 3;
+        }
+
+        function revolver() {
+            weapon = "revolver";
+            damage = 1;
+        }
+
+        function inseticida() {
+            weapon = "inseticida";
+            damage = 7;
+        }
+
+        function chinelo() {
+            weapon = "chinelo";
+            damage = 6;
+        }
+
+    </script>
+</body>
+</html>

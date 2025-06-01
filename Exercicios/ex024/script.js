@@ -37,7 +37,21 @@ nomeCompleto = `${nome} ${sobrenome} tem ${idade} anos`;
 
 console.log(nomeCompleto)
 
+const carro = {
+    marca: "ford",
+    modelo: "ka",
+    ano: 2025,
+    placa: "ABC-1234", 
+    buzina: function() {alert('Biiiiiiip')},
+    acelerar: function(acel) {velF = velI + acel},
+    frear: function(fre) {velF = velI - fre},
+    darPartida: function() {key=true}
+};
 
- 
+carro.acelerar(10);
+carro.frear(5);
+carro.darPartida();
+
+
 
 
