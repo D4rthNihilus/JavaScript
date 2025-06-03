@@ -84,6 +84,34 @@
             opacity: 1.0;
         }
 
+        img#weapon {
+            position: absolute;
+            display: none;
+        }
+
+        div#win {
+            position: absolute;
+            background-color: rgba(182, 190, 176, 0.404);
+            background-image: url('https://t4.ftcdn.net/jpg/08/12/18/89/360_F_812188957_yv4u40f0JyrF4egwQdOfGQnq76dwJnxC.jpg');
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3em;
+            font-weight: bolder;
+            height: 360px;
+            width: 700px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+            text-align: center;
+            display: grid;
+            align-items: center;
+            align-content: center;
+            display: none;
+        }
+
+        div#win p {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.829);
+        }
+
     </style>
 </head>
 <body>
@@ -112,6 +140,12 @@
             <div class="vida" id="v1"></div>
         </div>
         <img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-cartoon-scary-cockroach-on-white-background-picture-image_8674592.png" alt="barata">
+
+        <img src="https://www.icegif.com/wp-content/uploads/2022/09/icegif-1612.gif" id="weapon">
+
+        <div id="win">
+            <p>PARABÉNS,VOCÊ <br>DERROTOU O BARATÃO!</p>
+        </div>
     </div>
 
     <div id="buttons">
@@ -126,50 +160,320 @@
         </div>
     </div>
 
-    <script src="script.js">
+    <script>
 
     let life = 20;
-    let damage = 0;
     let weapon;
+    let damage = 0;
     let totalDamage = 0;
+    let v1 = document.getElementById('v1');
+    let v2 = document.getElementById('v2');
+    let v3 = document.getElementById('v3');
+    let v4 = document.getElementById('v4');
+    let v5 = document.getElementById('v5');
+    let v6 = document.getElementById('v6');
+    let v7 = document.getElementById('v7');
+    let v8 = document.getElementById('v8');
+    let v9 = document.getElementById('v9');
+    let v10 = document.getElementById('v10');
+    let v11 = document.getElementById('v11');
+    let v12 = document.getElementById('v12');
+    let v13 = document.getElementById('v13');
+    let v14 = document.getElementById('v14');
+    let v15 = document.getElementById('v15');
+    let v16 = document.getElementById('v16');
+    let v17 = document.getElementById('v17');
+    let v18 = document.getElementById('v18');
+    let v19 = document.getElementById('v19');
+    let v20 = document.getElementById('v20');
+
 
         function lifeLevel() {
-            totalDamage += damage;
+            life = life - damage;
+            
+            if (life == 19) {
+                v1.style.backgroundColor='White';
+            } else if (life == 18){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+            } else if (life == 17){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+            } else if (life == 16){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+            } else if (life == 15){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+            } else if (life == 14){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+            } else if (life == 13){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+            } else if (life == 12){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+            } else if (life == 11){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+            } else if (life == 10){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+            } else if (life == 9){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+            } else if (life == 8){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+            } else if (life == 7){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+            } else if (life == 6){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+            } else if (life == 5){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+                v15.style.backgroundColor='White';
+            } else if (life == 4){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+                v15.style.backgroundColor='White';
+                v16.style.backgroundColor='White';
+            } else if (life == 3){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+                v15.style.backgroundColor='White';
+                v16.style.backgroundColor='White';
+                v17.style.backgroundColor='White';
+                
+            } else if (life == 2){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+                v15.style.backgroundColor='White';
+                v16.style.backgroundColor='White';
+                v17.style.backgroundColor='White';
+                v18.style.backgroundColor='White';
+                
+            } else if (life == 1) {
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+                v15.style.backgroundColor='White';
+                v16.style.backgroundColor='White';
+                v17.style.backgroundColor='White';
+                v18.style.backgroundColor='White';
+                v19.style.backgroundColor='White';
+            } else if (life <= 0){
+                v1.style.backgroundColor='White';
+                v2.style.backgroundColor='White';
+                v3.style.backgroundColor='White';
+                v4.style.backgroundColor='White';
+                v5.style.backgroundColor='White';
+                v6.style.backgroundColor='White';
+                v7.style.backgroundColor='White';
+                v8.style.backgroundColor='White';
+                v9.style.backgroundColor='White';
+                v10.style.backgroundColor='White';
+                v11.style.backgroundColor='White';
+                v12.style.backgroundColor='White';
+                v13.style.backgroundColor='White';
+                v14.style.backgroundColor='White';
+                v15.style.backgroundColor='White';
+                v16.style.backgroundColor='White';
+                v17.style.backgroundColor='White';
+                v18.style.backgroundColor='White';
+                v19.style.backgroundColor='White';
+                v20.style.backgroundColor='White';
+
+                win = document.getElementById('win');
+                win.style.display='block';
+            }
         }
 
         function missil() {
             weapon = "missil";
             damage = 5;
-        }
-
-        function missil() {
-            weapon = "missil";
-            damage = 5;
+            lifeLevel();
         }
 
         function granada() {
             weapon = "granada";
             damage = 4;
+            lifeLevel();
+            
+        }
+
+        function macarico() {
+            weapon = "macarico";
+            damage = 2;
+            lifeLevel();
         }
 
         function bazuca() {
             weapon = "bazuca";
             damage = 3;
+            lifeLevel();
         }
 
         function revolver() {
             weapon = "revolver";
             damage = 1;
+            lifeLevel();
         }
 
         function inseticida() {
             weapon = "inseticida";
             damage = 7;
+            lifeLevel();
         }
 
         function chinelo() {
             weapon = "chinelo";
             damage = 6;
+            lifeLevel();
+        }
+
+        function shot() {
+            shot.style.display="block";
         }
 
     </script>

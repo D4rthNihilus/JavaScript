@@ -14,15 +14,21 @@
 <body>
     <h1>Aprendendo JavaScript</h1>
     <p id="texto"></p>
-    <p>
+    <p on>
         <script>
             document.write('Oi escrito com document.write')
         </script>
+
+        <div id="div" style="width: 300px; height: 50px;background-color: green" ondragover="turnRed()"></div>
     </p>
 
 
     <script>
         document.getElementById('texto').innerHTML='Meu primeiro texto <strong>JS</strong>!';
+
+        function turnRed() {
+            document.getElementById('div').style.backgroundColor ="Red";
+        }
     </script>
 </body>
 </html>
