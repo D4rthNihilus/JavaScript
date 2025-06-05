@@ -65,12 +65,17 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
+    align-items: end;
 }
 
 main > section#perguntas {
     text-align: justify;
     line-height: 20px;
+}
+
+section#perguntas p:first-child{
+    text-align: center;
+    color: rgba(128, 128, 128, 0.699)
 }
 
 main > section#imagem > img {
@@ -84,16 +89,18 @@ main > section#respostas {
     gap: 10px;
 }
 
-main > section#respostas > div {
+main > section#respostas > div, a {
     padding: 10px;
     background-color: rgba(41, 95, 16, 0.651);
     border-top-right-radius: 20px;
     font-weight: bolder;
     box-sizing: border-box;
     border: 3px solid  rgba(41, 95, 16);
+    color: black;
+    text-decoration: none;
 }
 
-main > section#respostas > div:hover {
+main > section#respostas > div:hover, a:hover {
     box-sizing: border-box;
-    border: 3px solid red;
+    background-color:  rgba(88, 192, 36, 0.651);;
 }
