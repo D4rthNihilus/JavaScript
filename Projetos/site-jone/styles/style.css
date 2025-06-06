@@ -23,21 +23,21 @@ header {
 }
 
 header div > img {
-    width: 80px;
+    width: 60px;
 }
 
 header h1 {
     text-align: center;
     font-family: "Sega", Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 2.5em;
     color: blueviolet;
     text-shadow: 1px 1px 3px rgb(255, 255, 255);
     line-height: 0.8em;
 }
 
 main {
-    margin: 30px;
+    margin: 20px 30px 30px 30px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.479);
@@ -47,14 +47,26 @@ main {
 
 main p {
     padding: 10px 0px;
+    color: rgb(255, 12, 12);
+    font-weight: bolder;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
 }
 
 main > article#characters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-image: url("https://t3.ftcdn.net/jpg/09/98/03/64/360_F_998036496_MaB5SChl9ku4OYCIgHtBLzIEqTEpF8o5.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 20px;
 }
 
 main > article#characters > img {
     height: 110px;
+    padding: 0px 20px;
 }

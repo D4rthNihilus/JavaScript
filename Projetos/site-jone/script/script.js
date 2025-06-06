@@ -10,7 +10,7 @@ function mudarPersonagem() {
 
     } else if (number==2) {
         //Aku Aku
-        character.setAttribute("src", "https://media.tenor.com/eGy2mKHlD5cAAAA1/ooga-booga-goldberg.webp");
+        character.setAttribute("src","https://media.giphy.com/media/fXtNlQmOrzDPuYvon8/source.gif");
         number = 3;
 
     } else if (number==3) {
@@ -85,12 +85,12 @@ function mudarPersonagem() {
 
     } else if (number==17) {
         //Toad
-        character.setAttribute("src", "https://media.tenor.com/azcgMMUGlesAAAAm/mario-party.webp");
+        character.setAttribute("src", "https://media.tenor.com/9OJGU_R5N8YAAAAm/mario-golf-mario.webp");
         number = 18;
 
     } else if (number==18) {
         //Koopa
-        character.setAttribute("src", "https://media.tenor.com/t5b9DtnnNc8AAAAm/koopa-bah-bah.webp");
+        character.setAttribute("src", "https://media.tenor.com/SxEswkTxF1kAAAAm/turtle-mario-gaming.webp");
         number = 19;
     
     } else if (number==19) {
@@ -100,14 +100,14 @@ function mudarPersonagem() {
 
     } else if (number==20) {
         //Friday Night
-        character.setAttribute("src", "https://media.tenor.com/c3vS3Kh-p5IAAAAm/bf-fnf.webp");
+        character.setAttribute("src", "https://media.tenor.com/nAsil_MiXFQAAAAm/fnf-friday-night-funkin.webp");
         number = 0;
 
     } else {
         //Crash
         character.setAttribute("src", "https://media.tenor.com/E8SSBCl5b14AAAAm/crash.webp");
-        number = 1;
+        number = 1
     }
 
-    clickCrash.style.display='none';
+    clickCrash.innerHTML='&#x1F973;Happy Birthday&#x1F382;';
 }
