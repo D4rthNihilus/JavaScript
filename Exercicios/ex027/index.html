@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Exercicio 1 CFBCursos</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #c1, #c2 {
+            border: 3px solid black;
+            width: 30vw;
+            height: 450px;
+            font-size: 1.5em;
+            text-align: center;
+            display: grid;
+            align-content: center;
+            background-color: rgb(237, 231, 248);
+            
+        }
+
+        div.container > div {
+            background-color: rgb(179, 172, 194);
+            margin: 5px 10px;
+            height: 35px;
+            display: grid;
+            align-items: center;
+            border-radius: 15px;
+            border: 3px solid gray;
+        }
+
+        .selecionado {
+            border: 3px solid red;
+            background-color: pink;
+        }
+
+        input {
+            width: 120px;
+            padding: 10px 0px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(13, 13, 126);
+            color: #ffffff;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div id="c1" class="container">
+        <div id="html" class="curso" >HTML</div>
+        <div id="css" class="curso">CSS</div>
+        <div id="js" class="curso">JavaScript</div>
+        <div id="php" class="curso">PHP</div>
+        <div id="react" class="curso">React</div>
+        <div id="mysql" class="curso">MySQL</div>
+    </div>
+    <input type="button" value="<- Transferir ->" id="btn">
+    <div id="c2" class="container"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
