@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 do CFBCursos JS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding:0px;
+        }
+
+        body {
+            margin: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .caixas {
+            padding: 20px;
+            border: 3px solid black;
+            height: 500px;
+            width: 40%;
+            background-color: #e4e4e4;
+            display: grid;
+            align-content: center;
+            justify-items: center;
+        }
+
+        #caixa1 {
+            gap: 15px;
+        }
+
+        #caixa1 > p {
+            text-align: center;
+        }
+
+        #caixa1 > input {
+            padding: 5px;
+            width: 80%;
+        }
+
+        #caixa1 > button {
+            padding: 10px;
+            width: 70%;
+            background-color: rgb(96, 28, 160);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #caixa1 > button:hover {
+            background-color: rgb(51, 14, 85);
+        }
+
+        #caixa2 {
+            gap: 10px;
+        }
+
+        #caixa2 > div.cursos {
+            background-color: rgb(212, 212, 231);
+            display: flex;
+            justify-content: space-between;
+            border: 3px solid gray;
+            border-radius: 10px;
+            padding: 10px;
+            width: 70%;
+        }
+
+         #caixa2 > div.cursos:hover {
+            background-color: rgb(164, 164, 180);
+         }
+
+    </style>
+</head>
+<body>
+    <div id="caixa1" class="caixas">
+        <p>Nome do Curso</p>
+        <input type="text" id="novoCurso">
+        <button id="add">Adicionar</button>
+        <button id="remove">Remover Selecionado</button>
+        <button id="select">Curso Selecionado</button>
+    </div>
+
+    <div id="caixa2" class="caixas">
+        <div class="cursos">
+            <div class="nomeDoCurso">HTML</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+
+        <div class="cursos">
+            <div class="nomeDoCurso">CSS</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+
+        <div class="cursos">
+            <div class="nomeDoCurso">JavaScript</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+
+        <div class="cursos">
+            <div class="nomeDoCurso">PHP</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+
+        <div class="cursos">
+            <div class="nomeDoCurso">React</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+
+        <div class="cursos">
+            <div class="nomeDoCurso">MySQL</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+
+        <div class="cursos">
+            <div class="nomeDoCurso">ReactNative</div>
+            <div><input type="radio" name="curso"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
