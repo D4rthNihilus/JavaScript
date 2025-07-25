@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 do CFB Cursos JS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            margin: 10px;
+        }
+        body > div {
+            border-radius: 10px;
+            padding: 7px;
+            margin-bottom: 10px;
+        }
+
+        #div1 {
+            background-color:  rgba(86, 194, 86, 0.404);
+            border: 3px solid green;
+        }
+
+        #div2 {
+            background-color: rgba(42, 135, 211, 0.336);
+            border: 3px solid rgb(3, 3, 122);
+        }
+
+        #div2 > input#reduzir {
+            background-color: rgb(3, 3, 122);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+
+        #div2 > input#reduzir:hover {
+            background-color: rgb(7, 34, 185);
+        }
+
+        #div3 {
+            background-color: rgba(255, 0, 0, 0.212);
+            border: 3px solid rgb(204, 5, 5);
+        }
+
+        #div3 > p {
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p>Array: </p>
+        <div id="array"></div>
+    </div>
+
+    <div id="div2">
+        <input type="button" value="Reduzir" id="reduzir">
+    </div>
+
+    <div id="div3">
+        <p>Resultado:</p>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
