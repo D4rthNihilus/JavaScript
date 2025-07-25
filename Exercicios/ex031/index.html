@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 do CFB Cursos JS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            margin: 10px;
+        }
+        body > div {
+            border-radius: 10px;
+            padding: 7px;
+            margin-bottom: 10px;
+        }
+
+        #div1 {
+            background-color:  rgba(86, 194, 86, 0.404);
+            border: 3px solid green;
+        }
+
+        #div2 {
+            background-color: rgba(42, 135, 211, 0.336);
+            border: 3px solid rgb(3, 3, 122);
+        }
+
+        #div2 > input#texto {
+            padding: 2px;
+            width: 225px;
+            margin-top: 5px;
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+
+        #div2 > input#pesquisar {
+            background-color: rgb(3, 3, 122);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            margin: 10px 0px;
+        }
+
+        #div2 > input#pesquisar:hover {
+            background-color: rgb(9, 43, 236);
+        }
+
+        #div3 {
+            background-color: rgba(255, 0, 0, 0.212);
+            border: 3px solid rgb(204, 5, 5);
+            display: flex;
+        }
+
+        #div3 > p {
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p>Array: </p>
+        <div id="array"></div>
+    </div>
+
+    <div id="div2">
+        <label for="texto">Pesquisar por:</label>
+        <br>
+        <input type="text" name="texto" id="texto">
+        <br>
+        <input type="button" value="Pesquisar" id="pesquisar">
+    </div>
+
+    <div id="div3">
+        <p>Resultado:</p>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
