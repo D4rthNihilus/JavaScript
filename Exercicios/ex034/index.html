@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+        }
+
+        div#calculadora {
+            background-color: rgb(191, 226, 214);
+            padding: 20px;
+            display: grid;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.493);
+        }
+
+        div#numero1, div#numero2 {
+            text-align: center;
+            margin: auto;
+        }
+
+        input#n1, input#n2 {
+            width: 80px;
+            height: 20px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        div#calculos {
+            margin: 15px;
+            grid-column: span 2;
+            display: grid;
+            justify-content: center;
+            gap: 10px;
+            grid-template-columns: 150px 150px;
+        }
+
+        div#calculos > input {
+            padding: 10px;
+            background-color: rgb(13, 109, 109);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.541);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.219);
+            border: none;
+            font-weight: bolder;
+        }
+
+        div#calculos > input:hover {
+            background-color: rgb(2, 22, 21);
+        }
+
+        div#resultado {
+            grid-column: span 2;
+            display: block;
+            text-align: center;
+        }
+
+         div#resultado > div#res{
+            display: grid;
+            align-content: center;
+            background-color: white;
+            padding: 15px;
+            margin: 5px auto;
+            width: 300px;
+            height: 10px;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <div id="calculadora">
+        <div id="numero1">
+            <label for="n1">Número 1:</label>
+            <input type="text" name="n1" id="n1">
+        </div>
+        <div id="numero2">
+            <label for="n2">Número 2:</label>
+            <input type="text" name="n2" id="n2">
+        </div>
+        <div id="calculos">
+            <input type="button" value="Somar" id="soma">
+            <input type="button" value="Subtrair" id="subt">
+            <input type="button" value="Multiplicar" id="mult">
+            <input type="button" value="Dividir" id="div">
+            <input type="button" value="Elevar" id="pot">
+            <input type="button" value="Média" id="media">
+            <input type="button" value="Maior" id="maior">
+            <input type="button" value="Menor" id="menor">
+        </div>
+        <div id="resultado">
+            <p>Resultado:</p>
+            <div id="res"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
